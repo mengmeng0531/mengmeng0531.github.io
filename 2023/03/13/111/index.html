@@ -9,7 +9,7 @@
     
     <title>
         
-            java  如何定义一个数组 |
+            将整数换成文字1 |
         
         Keep Theme
     </title>
@@ -201,7 +201,7 @@
         <div class="article-content-container">
 
             <div class="article-title">
-                <span class="title-hover-animation">java  如何定义一个数组</span>
+                <span class="title-hover-animation">将整数换成文字1</span>
             </div>
 
             
@@ -223,13 +223,13 @@
         
             <i class="fa-regular fa-calendar-plus"></i>&nbsp;
         
-        <span class="pc">2023-03-08 17:01:54</span>
-        <span class="mobile">2023-03-08 17:01</span>
+        <span class="pc">2023-03-13 11:56:16</span>
+        <span class="mobile">2023-03-13 11:56</span>
     </span>
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2023-03-08 17:05:06</span>
+        <span class="pc">2023-03-13 11:56:51</span>
     </span>
     
     
@@ -249,11 +249,26 @@
             <div class="article-content keep-markdown-body">
                 
 
-                <p>&#x2F;&#x2F; 定义一个整型数组，数组名为numbers，包含5个元素<br>int[] numbers &#x3D; new int[5];</p>
-<p>&#x2F;&#x2F; 定义一个字符串数组，数组名为names，包含3个元素<br>String[] names &#x3D; new String[3];</p>
-<p>&#x2F;&#x2F; 定义一个双精度浮点型数组，数组名为doubles，包含10个元素<br>double[] doubles &#x3D; new double[10];</p>
-<p>在上述示例中，[]表示这是一个数组类型的变量。要定义一个数组，需要指定数组的类型和大小。数组的大小指定了数组中元素的个数。在这些示例中，数组中元素的个数分别为5、3和10。可以根据需要调整数组大小。</p>
-<p>要访问数组中的元素，可以使用数组名和元素的下标。数组的第一个元素的下标为0，最后一个元素的下标为数组大小减1。例如，要访问numbers数组的第三个元素，可以使用numbers[2]。</p>
+                <p>如果您想将用户从键盘输入的整数转换为文字表示，您可以使用Java的NumberFormat类或其他第三方库，例如Apache Commons Lang中的NumberUtils类。</p>
+<p>以下是使用Java的NumberFormat类实现此功能的示例代码：</p>
+<p>import java.text.NumberFormat;<br>import java.util.Scanner;</p>
+<p>public class Main {<br>    public static void main(String[] args) {<br>        int number &#x3D; readIntegerFromConsole();<br>        String numberInWords &#x3D; convertNumberToWords(number);<br>        System.out.println(“您输入的整数是：” + numberInWords);<br>    }</p>
+<pre><code>public static int readIntegerFromConsole() &#123;
+    Scanner scanner = new Scanner(System.in);
+    System.out.print(&quot;请输入一个整数：&quot;);
+    int number = scanner.nextInt();
+    return number;
+&#125;
+
+public static String convertNumberToWords(int number) &#123;
+    NumberFormat format = NumberFormat.getInstance();
+    return format.format(number);
+&#125;
+</code></pre>
+<p>}</p>
+<p>在上面的代码中，我们定义了一个名为convertNumberToWords的方法，该方法使用NumberFormat类将整数转换为文本表示。NumberFormat.getInstance()方法返回一个默认的NumberFormat对象，它可以将数字格式化为本地语言的文本表示形式。在这个示例中，我们将返回的文本表示直接作为字符串返回。</p>
+<p>在main方法中，我们首先使用readIntegerFromConsole方法读取用户输入的整数。然后，我们使用convertNumberToWords方法将整数转换为文本表示。最后，我们使用System.out.println方法打印出用户输入的整数的文本表示形式。</p>
+<p>请注意，使用NumberFormat类将整数转换为文本表示形式时，您可能需要在方法中处理NumberFormatException异常，以便在用户输入无效数字时进行错误处理。</p>
 
             </div>
 
@@ -264,29 +279,14 @@
             
                 <div class="article-nav">
                     
-                        <div class="article-prev">
-                            <a class="prev"
-                               rel="prev"
-                               href="/2023/03/08/1%20(3)/"
-                            >
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
-                            </span>
-                                <span class="title flex-center">
-                                <span class="post-nav-title-item">java 如果控制台输入 你好，打印 我不好</span>
-                                <span class="post-nav-item">Prev posts</span>
-                            </span>
-                            </a>
-                        </div>
-                    
                     
                         <div class="article-next">
                             <a class="next"
                                rel="next"
-                               href="/2023/03/08/1%20(1)/"
+                               href="/2023/03/08/1%20(8)/"
                             >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">用spring boot 开发一个网站的大纲</span>
+                                <span class="post-nav-title-item">java 键盘键入数字存起来</span>
                                 <span class="post-nav-item">Next posts</span>
                             </span>
                                 <span class="right arrow-icon flex-center">
